@@ -2,8 +2,6 @@
 title: ファームウェアのデバッグ
 ---
 
-# デバッグ
-
 PCB 上のピンとパッドの位置については、この画像を参照してください:
 ![PCB header locations](./images/pcb-headers.png)
 
