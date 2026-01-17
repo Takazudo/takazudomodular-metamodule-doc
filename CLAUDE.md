@@ -6,6 +6,10 @@ Japanese translation documentation site for [4ms MetaModule](https://github.com/
 
 **Target URL**: https://takazudomodular.com/pj/metamodule-doc/
 
+**Netlify Domain**: https://takazudomodular-4ms.netlify.app/
+
+The target URL is a custom domain that rewrites to the Netlify domain.
+
 ## Important Notes
 
 - Conversation with AI is in English
@@ -27,6 +31,8 @@ zmetadoc/
 │   ├── static/
 │   │   └── img/
 │   ├── plugins/
+│   ├── scripts/
+│   │   └── b4push.sh       # Pre-push validation script
 │   ├── sub-packages/
 │   │   └── mdx-formatter/  # Markdown/MDX formatter
 │   ├── docusaurus.config.js
@@ -40,11 +46,13 @@ zmetadoc/
 │       └── main-deploy.yml
 └── .claude/
     └── commands/
+        ├── b4push.md      # /b4push command
         └── update-doc.md  # /update-doc command
 ```
 
 ## Commands
 
+- `/b4push` - Run pre-push validation (typecheck, lint, format, build)
 - `/update-doc` - Update translations from upstream
 
 ## Development
