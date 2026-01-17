@@ -1,0 +1,31 @@
+# Docusaurus
+/doc/node_modules
+/doc/.docusaurus
+/doc/build
+/doc/.cache-loader
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor and IDE
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Backup files
+*.bak
+*.tmp
+*.orig
+
+# Temporary working directory
+__inbox/
+
+# env
+.env
+
+# Local Netlify folder
+.netlify

@@ -1,0 +1,3 @@
+[submodule "vendor/metamodule"]
+	path = vendor/metamodule
+	url = https://github.com/4ms/metamodule.git
