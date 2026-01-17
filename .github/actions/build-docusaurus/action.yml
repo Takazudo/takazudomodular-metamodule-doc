@@ -66,13 +66,32 @@ runs:
         NODE_ENV: production
         NODE_OPTIONS: '--max-old-space-size=4096'
 
+    - name: Restructure build for baseUrl
+      run: |
+        echo "Restructuring build output for baseUrl /pj/metamodule-doc/..."
+
+        # Create nested directory structure
+        mkdir -p build-final/pj/metamodule-doc
+
+        # Move all build content to nested path
+        mv build/* build-final/pj/metamodule-doc/
+
+        # Replace build with restructured content
+        rm -r build
+        mv build-final build
+
+        echo "Build restructured successfully"
+        echo "Content now at: build/pj/metamodule-doc/"
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+
     - name: Verify build output
       run: |
         echo "Build Output Verification"
         echo "============================"
 
-        if [ ! -d "build" ]; then
-          echo "Error: build/ directory not found"
+        if [ ! -d "build/pj/metamodule-doc" ]; then
+          echo "Error: build/pj/metamodule-doc/ directory not found"
           exit 1
         fi
 
@@ -80,7 +99,7 @@ runs:
         HTML_COUNT=$(find build -name "*.html" | wc -l)
         echo "HTML files: $HTML_COUNT"
 
-        if [ -d "build/assets" ]; then
+        if [ -d "build/pj/metamodule-doc/assets" ]; then
           echo "Docusaurus assets found"
         else
           echo "Warning: assets/ directory not found (might be ok for minimal builds)"
