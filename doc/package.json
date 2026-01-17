@@ -19,6 +19,7 @@
     "format:fix": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md,mdx}\" \"!node_modules/**\" \"!.docusaurus/**\" \"!build/**\"",
     "check": "pnpm run typecheck && pnpm run lint && pnpm run format",
     "check:fix": "pnpm run lint:fix && pnpm run format:fix",
+    "b4push": "./scripts/b4push.sh",
     "prepare": "cd .. && husky doc/.husky || true"
   },
   "dependencies": {
