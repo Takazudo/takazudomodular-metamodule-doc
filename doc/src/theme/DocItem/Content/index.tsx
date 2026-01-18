@@ -7,15 +7,26 @@ import MDXContent from '@theme/MDXContent';
 import type { Props } from '@theme/DocItem/Content';
 
 /**
- * Component to display document metadata (creation date, update date, author)
+ * Extended frontmatter type for original document reference
+ */
+interface ExtendedFrontMatter {
+  custom_creation_date?: string;
+  originalTitle?: string;
+  originalUrl?: string;
+}
+
+/**
+ * Component to display document metadata (creation date, update date, original document reference)
  * This is rendered on the server (SSR) to ensure it's available even with JavaScript disabled.
  */
 function DocMetadata(): ReactNode {
   const { frontMatter, metadata } = useDoc();
 
-  const creationDate = (frontMatter as { custom_creation_date?: string }).custom_creation_date;
+  const extendedFrontMatter = frontMatter as ExtendedFrontMatter;
+  const creationDate = extendedFrontMatter.custom_creation_date;
+  const originalTitle = extendedFrontMatter.originalTitle;
+  const originalUrl = extendedFrontMatter.originalUrl;
   const lastUpdatedAt = metadata.lastUpdatedAt;
-  const lastUpdatedBy = metadata.lastUpdatedBy;
 
   // Format the last updated date to match creation date format (YYYY/MM/DD)
   // Note: lastUpdatedAt is already in milliseconds (standard JS timestamp)
@@ -42,12 +53,19 @@ function DocMetadata(): ReactNode {
   }
 
   // Don't render anything if we have no metadata to show
-  if (!formattedCreationDate && !lastUpdatedAt && !lastUpdatedBy) {
+  if (!formattedCreationDate && !lastUpdatedAt && !originalUrl) {
     return null;
   }
 
   return (
     <ul className="theme-doc-meta">
+      {originalUrl && (
+        <li className="theme-doc-meta-original">
+          <a href={originalUrl} target="_blank" rel="noopener noreferrer">
+            原文: {originalTitle || 'Original Document'}
+          </a>
+        </li>
+      )}
       {formattedCreationDate && (
         <li className="theme-doc-meta-created">
           <span>作成:</span>
@@ -58,12 +76,6 @@ function DocMetadata(): ReactNode {
         <li className="theme-doc-meta-updated">
           <span>更新:</span>
           <time dateTime={new Date(lastUpdatedAt!).toISOString()}>{formattedUpdateDate}</time>
-        </li>
-      )}
-      {lastUpdatedBy && (
-        <li className="theme-doc-meta-author">
-          <span>著者:</span>
-          <address>{lastUpdatedBy}</address>
         </li>
       )}
     </ul>
