@@ -93,12 +93,14 @@ runs:
         cd doc
 
         # Build deployment command based on inputs
+        # Use --no-build since we're deploying a pre-built directory
         if [ "${{ inputs.deploy-production }}" = "true" ]; then
           echo "Deploying to production..."
           DEPLOY_OUTPUT=$(netlify deploy \
             --dir="build" \
             --site="${{ inputs.netlify-site-id }}" \
             --auth="$NETLIFY_AUTH_TOKEN" \
+            --no-build \
             --prod \
             --json \
             --message="${{ inputs.deploy-message }}" 2>&1) || {
@@ -112,6 +114,7 @@ runs:
             --dir="build" \
             --site="${{ inputs.netlify-site-id }}" \
             --auth="$NETLIFY_AUTH_TOKEN" \
+            --no-build \
             --alias="${{ inputs.deploy-alias }}" \
             --json \
             --message="${{ inputs.deploy-message }}" 2>&1) || {
