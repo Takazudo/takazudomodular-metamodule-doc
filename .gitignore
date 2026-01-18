@@ -1,11 +1,14 @@
 # MCP and testing tools
 .playwright-mcp/
 
+# Dependencies
+node_modules/
+
 # Docusaurus
-/doc/node_modules
-/doc/.docusaurus
-/doc/build
-/doc/.cache-loader
+.docusaurus/
+build/
+.cache-loader/
+
 
 # macOS
 .DS_Store

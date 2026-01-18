@@ -33,20 +33,11 @@ runs:
       with:
         node-version: ${{ inputs.node-version }}
         cache: 'pnpm'
-        cache-dependency-path: '${{ inputs.working-directory }}/pnpm-lock.yaml'
+        cache-dependency-path: 'pnpm-lock.yaml'
 
-    - name: Install dependencies
+    - name: Install workspace dependencies
       run: pnpm install --frozen-lockfile
       shell: bash
-      working-directory: ${{ inputs.working-directory }}
-
-    - name: Install sub-package dependencies
-      run: |
-        if [ -d "sub-packages/mdx-formatter" ]; then
-          cd sub-packages/mdx-formatter && pnpm install --frozen-lockfile || pnpm install
-        fi
-      shell: bash
-      working-directory: ${{ inputs.working-directory }}
 
     - name: Run code quality checks
       run: |
