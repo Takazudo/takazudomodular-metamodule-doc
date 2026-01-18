@@ -88,21 +88,14 @@ runs:
           exit 1
         fi
 
-        # Change to the doc directory to avoid monorepo "Projects detected" error
-        # This ensures netlify only sees the metamodule-doc-ja package
-        cd doc
-
-        # Build deployment command based on inputs
-        # Use --no-build since we're deploying a pre-built directory
+        # Deploy using simple approach matching reference project
         if [ "${{ inputs.deploy-production }}" = "true" ]; then
           echo "Deploying to production..."
           DEPLOY_OUTPUT=$(netlify deploy \
-            --dir="build" \
-            --site="${{ inputs.netlify-site-id }}" \
-            --auth="$NETLIFY_AUTH_TOKEN" \
-            --no-build \
+            --dir=./${{ inputs.build-dir }} \
+            --site=${{ inputs.netlify-site-id }} \
+            --auth=$NETLIFY_AUTH_TOKEN \
             --prod \
-            --json \
             --message="${{ inputs.deploy-message }}" 2>&1) || {
             echo "Deployment failed"
             echo "$DEPLOY_OUTPUT"
@@ -111,12 +104,10 @@ runs:
         else
           echo "Deploying to preview (alias: ${{ inputs.deploy-alias }})..."
           DEPLOY_OUTPUT=$(netlify deploy \
-            --dir="build" \
-            --site="${{ inputs.netlify-site-id }}" \
-            --auth="$NETLIFY_AUTH_TOKEN" \
-            --no-build \
+            --dir=./${{ inputs.build-dir }} \
+            --site=${{ inputs.netlify-site-id }} \
+            --auth=$NETLIFY_AUTH_TOKEN \
             --alias="${{ inputs.deploy-alias }}" \
-            --json \
             --message="${{ inputs.deploy-message }}" 2>&1) || {
             echo "Deployment failed"
             echo "$DEPLOY_OUTPUT"
@@ -126,15 +117,8 @@ runs:
 
         echo "$DEPLOY_OUTPUT"
 
-        # Parse deployment URL from JSON output
-        DEPLOY_URL=$(echo "$DEPLOY_OUTPUT" | jq -r '.deploy_url // empty')
-        SITE_URL=$(echo "$DEPLOY_OUTPUT" | jq -r '.url // empty')
-
-        if [ -z "$DEPLOY_URL" ]; then
-          echo "Warning: Could not parse deploy_url from JSON output"
-          # Fallback: try to extract URL from text output
-          DEPLOY_URL=$(echo "$DEPLOY_OUTPUT" | grep -o 'https://[^ ]*netlify.app' | head -1)
-        fi
+        # Extract deployment URL from text output
+        DEPLOY_URL=$(echo "$DEPLOY_OUTPUT" | grep -o 'https://[^ ]*netlify.app' | head -1)
 
         if [ -z "$DEPLOY_URL" ]; then
           echo "Error: Failed to extract deployment URL"
@@ -142,11 +126,6 @@ runs:
         fi
 
         echo "deploy-url=$DEPLOY_URL" >> $GITHUB_OUTPUT
-
-        if [ -n "$SITE_URL" ]; then
-          echo "preview-url=$SITE_URL" >> $GITHUB_OUTPUT
-        fi
-
         echo "Deployed successfully to: $DEPLOY_URL"
       shell: bash
       env:
