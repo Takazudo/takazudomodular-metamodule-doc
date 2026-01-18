@@ -346,18 +346,21 @@ article.theme-doc-markdown {
   column-gap: 0.5em;
   row-gap: 0.25em;
 }
+.theme-doc-meta-original,
 .theme-doc-meta-created,
 .theme-doc-meta-updated,
 .theme-doc-meta-author {
   display: flex;
   align-items: center;
 }
+.theme-doc-meta-original::after,
 .theme-doc-meta-created::after,
 .theme-doc-meta-updated::after {
   content: '|';
   margin: 0 0 0 0.5em;
 }
-.theme-doc-meta-author::after {
+/* Remove separator from last item */
+.theme-doc-meta > li:last-child::after {
   content: none;
 }
 .theme-doc-meta-created span,
