@@ -17,18 +17,46 @@
 const sidebars = {
   documentSidebar: [
     'document/index',
-    'document/setup',
-    'document/plugins',
-    'document/basic-vcv-patching',
-    'document/firmware-building',
-    'document/firmware-boot',
-    'document/firmware-debugging',
-    'document/firmware-loading',
-    'document/user-firmware-update',
-    'document/simulator-building',
-    'document/simulator-usage',
-    'document/simulator-ext-plugins',
-    'document/porting',
+    {
+      type: 'category',
+      label: 'はじめに',
+      items: ['document/getting-started'],
+    },
+    {
+      type: 'category',
+      label: '基本操作',
+      items: [
+        'document/using-knobs',
+        'document/using-jacks',
+        'document/using-midi',
+        'document/shortcuts',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'VCV Rack',
+      items: ['document/using-vcv-rack'],
+    },
+    {
+      type: 'category',
+      label: 'プラグインと設定',
+      items: [
+        'document/plugins',
+        'document/action-menu',
+        'document/patch-settings',
+        'document/preferences',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'エクスパンダー',
+      items: ['document/wifi-expander', 'document/meta-aio', 'document/meta-buttons'],
+    },
+    {
+      type: 'category',
+      label: 'ヘルプ',
+      items: ['document/troubleshooting', 'document/faq', 'document/versions', 'document/specs'],
+    },
   ],
 };
 
