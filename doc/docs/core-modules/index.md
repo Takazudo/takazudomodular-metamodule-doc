@@ -11,7 +11,7 @@ originalUrl: https://github.com/4ms/metamodule-core-modules/blob/main/doc/4ms-co
 
 ## Atvert
 
-<img src="./images/Atvert.png" width="48" />
+![Atvert](./images/Atvert.png)
 
 Atvertは2チャンネルのアッテヌバーターで、2つのノブを使って2つの入力信号をスケーリングおよび反転できます。チャンネルに入力が接続されていない場合は、+5Vのオフセットが入力として使用されます（結果として出力は-5V〜+5Vになります）。
 
@@ -26,7 +26,7 @@ Atvertは2チャンネルのアッテヌバーターで、2つのノブを使っ
 
 ## BPF
 
-<img src="./images/BPF.png" width="48" />
+![BPF](./images/BPF.png)
 
 BPFは12dB/オクターブのレゾナント・バンドパスフィルターで、2つのフィルタータイプがあります：KorgスタイルのSallen-Keyトポロジーに基づく「Standard」と、SEMのフィルターに基づく「Oberheim」です。
 
@@ -44,7 +44,7 @@ BPFは12dB/オクターブのレゾナント・バンドパスフィルターで
 
 ## Basic Wav Player
 
-<img src="./images/BWAVP.png" width="80" />
+![Basic Wav Player](./images/BWAVP.png)
 
 Basic Wav Playerは.wavファイルを再生するためのシンプルなモジュールです。.wavファイルをストリーミング再生するため、ファイル全体の読み込みを待たずに大きなファイルを再生できます。また、ファイルの一部のみをメモリに読み込むため、非ストリーミングプレーヤーよりもメモリ消費が少なくなります。ステレオおよびモノラルの.wavファイルに対応しており、オーディオはMetaModuleの現在のサンプルレートにリサンプリングされます。
 
@@ -94,7 +94,7 @@ Basic Wav Playerは.wavファイルを再生するためのシンプルなモジ
 
 ## CLKD
 
-<img src="./images/CLKD.png" width="48" />
+![CLKD](./images/CLKD.png)
 
 CLKDは、入力ゲートを受け取り、そのタイミングを指定された量で分周するシンプルなクロックディバイダーです。
 
@@ -110,7 +110,7 @@ CLKDは、入力ゲートを受け取り、そのタイミングを指定され�
 
 ## CLKM
 
-<img src="./images/CLKM.png" width="48" />
+![CLKM](./images/CLKM.png)
 
 CLKMは、入力ゲートを受け取り、そのタイミングを指定された量で逓倍するシンプルなクロックマルチプライヤーです。
 
@@ -126,7 +126,7 @@ CLKMは、入力ゲートを受け取り、そのタイミングを指定され�
 
 ## Complex EG
 
-<img src="./images/Complex_EG.png" width="168" />
+![Complex EG](./images/Complex_EG.png)
 
 Complex EGはADSHRエンベロープジェネレーターで、アタック、ディケイ、リリースタイムのカーブ形状を制御できます。このエンベロープは、長いノートホールドで時間とともにサウンドの複雑な変化を制御できるキーボードで特に便利です。
 
@@ -159,7 +159,7 @@ Complex EGはADSHRエンベロープジェネレーターで、アタック、�
 
 ## Detune
 
-<img src="./images/Detune.png" width="96" />
+![Detune](./images/Detune.png)
 
 Detuneは「ワウとフラッター」テープシミュレーターで、入力信号が擬似ランダムなピッチシフターによってゆっくりと変調されます。このエフェクトの目的は、校正不良のテープマシンの動作を模倣することです。
 
@@ -179,7 +179,7 @@ Detuneは「ワウとフラッター」テープシミュレーターで、入�
 
 ## Djembe
 
-<img src="./images/Djembe.png" width="96" />
+![Djembe](./images/Djembe.png)
 
 Djembeは、実際のアコースティック・ジャンベの音響特性に基づいたドラムモジュールです。シンプルなエキサイターとレゾナントフィルターを使用しています。
 
@@ -201,7 +201,7 @@ Djembeは、実際のアコースティック・ジャンベの音響特性に�
 
 ## Drum
 
-<img src="./images/Drum.png" width="156" />
+![Drum](./images/Drum.png)
 
 Drumは、シンプルな2オペレーターFMオシレーターコアとノイズソースに基づいたドラムモジュールです。
 
@@ -234,7 +234,7 @@ Drumは、シンプルな2オペレーターFMオシレーターコアとノイ�
 
 ## FM
 
-<img src="./images/FM.png" width="96" />
+![FM](./images/FM.png)
 
 FMは可変波形を持つ2オペレーターFMオシレーターです。
 
@@ -260,7 +260,7 @@ FMは可変波形を持つ2オペレーターFMオシレーターです。
 
 ## FLW
 
-<img src="./images/FLW.png" width="48" />
+![FLW](./images/FLW.png)
 
 FLWは、オーディオまたはCV信号の振幅に基づいて指数/対数エンベロープを生成するエンベロープフォロワーです。さらに、コンパレーター出力があります。
 
@@ -278,7 +278,7 @@ FLWは、オーディオまたはCV信号の振幅に基づいて指数/対数�
 
 ## Freeverb
 
-<img src="./images/Freeverb.png" width="96" />
+![Freeverb](./images/Freeverb.png)
 
 Freeverbは、人気のあるパブリックドメインのFreeverbアルゴリズムに基づいた軽量リバーブエフェクトです。オールパスフィルターとコムフィルターのコレクションを使用しています。
 
@@ -300,7 +300,7 @@ Freeverbは、人気のあるパブリックドメインのFreeverbアルゴリ�
 
 ## Gate
 
-<img src="./images/Gate.png" width="48" />
+![Gate](./images/Gate.png)
 
 Gateはゲート信号のモディファイアです。可変パルス幅とディレイを持つワンショットパルスジェネレーターがあります。
 
@@ -318,7 +318,7 @@ Gateはゲート信号のモディファイアです。可変パルス幅とデ�
 
 ## HPF
 
-<img src="./images/HPF.png" width="48" />
+![HPF](./images/HPF.png)
 
 HPFは12dB/Octのレゾナント・ハイパスフィルターで、2つのモードがあります：「Standard」とMS20のKorg Sallen-Keyスタイルのハイパスをミミックをした「Korg」です。
 
@@ -336,7 +336,7 @@ HPFは12dB/Octのレゾナント・ハイパスフィルターで、2つのモ�
 
 ## KPLS
 
-<img src="./images/KPLS.png" width="48" />
+![KPLS](./images/KPLS.png)
 
 KPLSは、Karplus Strongシンセシスモデルに基づいたパーカッシブモジュールで、フィルター付きディレイラインをピンして弦楽器のサウンドを模倣するシンプルな方法です。6つのディレイラインがあり、それぞれ異なる周波数です。
 
@@ -354,7 +354,7 @@ KPLSは、Karplus Strongシンセシスモデルに基づいたパーカッシ�
 
 ## LPG
 
-<img src="./images/LPG.png" width="96" />
+![LPG](./images/LPG.png)
 
 LPGはローパスゲートです。ローパスゲートはレゾナント・ローパスフィルターとVCAの組み合わせです。トリガーでモジュールを「ピン」して微妙なドラムサウンドを得ることができます。
 
@@ -375,7 +375,7 @@ LPGはローパスゲートです。ローパスゲートはレゾナント・�
 
 ## MNMX
 
-<img src="./images/MNMX.png" width="48" />
+![MNMX](./images/MNMX.png)
 
 MNMX（Min/Max）は、2つの信号の最小値と最大値を出力します。
 
@@ -388,7 +388,7 @@ MNMX（Min/Max）は、2つの信号の最小値と最大値を出力します�
 
 ## Multi LFO
 
-<img src="./images/Multi_LFO.png" width="96" />
+![Multi LFO](./images/Multi_LFO.png)
 
 Multi LFOは、4つの波形出力、可変パルス幅、可変位相を持つLFOです。
 
@@ -411,7 +411,7 @@ Multi LFOは、4つの波形出力、可変パルス幅、可変位相を持つL
 
 ## NSE
 
-<img src="./images/NSE.png" width="48" />
+![NSE](./images/NSE.png)
 
 NSEは、ホワイトとピンクの2つの出力を持つノイズジェネレーターです。
 
@@ -422,7 +422,7 @@ NSEは、ホワイトとピンクの2つの出力を持つノイズジェネレ�
 
 ## OCT
 
-<img src="./images/OCT.png" width="48" />
+![OCT](./images/OCT.png)
 
 OCTは1V/octピッチ情報用のオクターブトランスポーズツールです。入力ノートを正確なオクターブ数だけ上下にシフトできます。
 
@@ -438,7 +438,7 @@ OCTは1V/octピッチ情報用のオクターブトランスポーズツール�
 
 ## Pan
 
-<img src="./images/Pan.png" width="48" />
+![Pan](./images/Pan.png)
 
 Panはステレオフィールド内で信号をパンニングするためのシンプルなユーティリティです。
 
@@ -455,7 +455,7 @@ Panはステレオフィールド内で信号をパンニングするための�
 
 ## Pitch Shift
 
-<img src="./images/Pitch_Shift.png" width="84" />
+![Pitch Shift](./images/Pitch_Shift.png)
 
 Pitch Shiftはシンプルなピッチシフターです。
 
@@ -476,7 +476,7 @@ Pitch Shiftはシンプルなピッチシフターです。
 
 ## Prob 8
 
-<img src="./images/Prob_8.png" width="96" />
+![Prob 8](./images/Prob_8.png)
 
 Prob 8は、ステップごとの確率を持つ8ステップゲートシーケンサーです。
 
@@ -493,7 +493,7 @@ Prob 8は、ステップごとの確率を持つ8ステップゲートシーケ�
 
 ## S&H
 
-<img src="./images/S_H.png" width="48" />
+![S&H](./images/S_H.png)
 
 S&Hはシンプルなデュアル・サンプル＆ホールドモジュールです。
 
@@ -508,7 +508,7 @@ S&Hはシンプルなデュアル・サンプル＆ホールドモジュール�
 
 ## SEQ 8
 
-<img src="./images/SEQ8.png" width="96" />
+![SEQ 8](./images/SEQ8.png)
 
 SEQ8は基本的な8ステップCVシーケンサーです。
 
@@ -525,7 +525,7 @@ SEQ8は基本的な8ステップCVシーケンサーです。
 
 ## SLW
 
-<img src="./images/Slew.png" width="48" />
+![SLW](./images/Slew.png)
 
 SLWは入力CVまたはオーディオを処理するためのシンプルなアタック/リリース・スルーリミッターです。
 
@@ -541,7 +541,7 @@ SLWは入力CVまたはオーディオを処理するためのシンプルなア
 
 ## SRC
 
-<img src="./images/Source.png" width="48" />
+![SRC](./images/Source.png)
 
 SRCはデュアル・バイポーラDCオフセットジェネレーターです。
 
@@ -557,7 +557,7 @@ SRCはデュアル・バイポーラDCオフセットジェネレーターです
 
 ## Stereo Mixer
 
-<img src="./images/Stereo_Mixer.png" width="216" />
+![Stereo Mixer](./images/Stereo_Mixer.png)
 
 Stereo Mixerは、チャンネルごとにパンを持つ4チャンネルステレオオーディオミキサーです。
 
@@ -575,7 +575,7 @@ Stereo Mixerは、チャンネルごとにパンを持つ4チャンネルステ�
 
 ## Switch 1:4
 
-<img src="./images/Switch_1-4.png" width="96" />
+![Switch 1:4](./images/Switch_1-4.png)
 
 Switch 1:4は、信号を受け取り4つの出力先のうち1つにルーティングするシーケンシャルスイッチモジュールです。
 
@@ -589,7 +589,7 @@ Switch 1:4は、信号を受け取り4つの出力先のうち1つにルーテ�
 
 ## Switch 4:1
 
-<img src="./images/Switch_4-1.png" width="96" />
+![Switch 4:1](./images/Switch_4-1.png)
 
 Switch 4:1は、4つの信号を受け取り1つの出力先にルーティングするシーケンシャルスイッチモジュールです。
 
@@ -603,7 +603,7 @@ Switch 4:1は、4つの信号を受け取り1つの出力先にルーティン�
 
 ## Verb
 
-<img src="./images/Verb.png" width="120" />
+![Verb](./images/Verb.png)
 
 追加コントロールを持つFreeverbアルゴリズムに基づいた実験的なリバーブモジュールです。しばしばノイジーで、ハーシュで、予測不能です。
 
