@@ -13,6 +13,20 @@ MetaModuleの物理的なレイアウトとコントロールについては、�
 
 ![フェースプレート概要](./images/faceplate-overview.svg)
 
+| 英語                            | 日本語                                   |
+| ------------------------------- | ---------------------------------------- |
+| Knobs A B C D E F u v w x y z   | ノブ A B C D E F u v w x y z             |
+| Map to virtual module controls. | 仮想モジュールのコントロールにマッピング |
+| Gate Ins                        | ゲート入力                               |
+| Audio/CV Ins 1–6                | オーディオ/CV入力 1–6                    |
+| Audio/CV Outs 1–8               | オーディオ/CV出力 1–8                    |
+| Back Button                     | バックボタン                             |
+| Color shows Knob Set            | 色でノブセットを表示                     |
+| microSD Card                    | microSDカード                            |
+| Load patches and plugins        | パッチとプラグインを読み込み             |
+| USB-C                           | USB-C                                    |
+| Rotary                          | ロータリーエンコーダー                   |
+
 ## 電源ケーブルの接続
 
 **電源ケーブルをMetaModuleに接続します。赤いストライプを下にしてください。** もう一方の端をEurorack電源に接続します。
