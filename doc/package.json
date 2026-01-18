@@ -56,7 +56,7 @@
   },
   "lint-staged": {
     "docs/**/*.{md,mdx}": [
-      "node sub-packages/mdx-formatter/src/cli.js --write"
+      "node ../sub-packages/mdx-formatter/src/cli.js --write"
     ],
     "**/*.{ts,tsx,js,jsx,json,css}": [
       "prettier --write"

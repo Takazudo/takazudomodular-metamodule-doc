@@ -1,0 +1,10 @@
+{
+  "name": "zmetadoc",
+  "private": true,
+  "scripts": {
+    "format:md": "node sub-packages/mdx-formatter/src/cli.js"
+  },
+  "engines": {
+    "node": ">=20.0"
+  }
+}

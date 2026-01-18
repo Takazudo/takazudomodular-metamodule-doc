@@ -21,32 +21,33 @@ The target URL is a custom domain that rewrites to the Netlify domain.
 
 ```
 zmetadoc/
-├── doc/                # Docusaurus site
+├── doc/                    # Docusaurus site
 │   ├── docs/
-│   │   └── document/   # Translated Japanese docs
+│   │   └── document/       # Translated Japanese docs
 │   ├── src/
 │   │   ├── css/
-│   │   └── theme/      # Custom Docusaurus theme overrides
+│   │   └── theme/          # Custom Docusaurus theme overrides
 │   ├── static/
 │   │   └── img/
 │   ├── plugins/
 │   ├── scripts/
 │   │   └── b4push.sh       # Pre-push validation script
-│   ├── sub-packages/
-│   │   └── mdx-formatter/  # Markdown/MDX formatter
 │   ├── docusaurus.config.js
 │   ├── sidebars.js
 │   └── package.json
+├── sub-packages/
+│   └── mdx-formatter/      # Markdown/MDX formatter
 ├── .github/
 │   ├── actions/
 │   │   ├── build-docusaurus/
 │   │   └── deploy-netlify/
 │   └── workflows/
 │       └── main-deploy.yml
-└── .claude/
-    └── commands/
-        ├── b4push.md      # /b4push command
-        └── update-doc.md  # /update-doc command
+├── .claude/
+│   └── commands/
+│       └── b4push.md       # /b4push command
+├── package.json            # Root workspace package
+└── pnpm-workspace.yaml     # pnpm workspace config
 ```
 
 ## Commands
@@ -56,8 +57,8 @@ zmetadoc/
 ## Development
 
 ```bash
+pnpm install      # Install all workspace dependencies
 cd doc
-pnpm install
 pnpm start
 ```
 
