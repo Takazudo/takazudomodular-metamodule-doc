@@ -20,11 +20,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'はじめに',
+      collapsible: false,
       items: ['document/getting-started'],
     },
     {
       type: 'category',
       label: '基本操作',
+      collapsible: false,
       items: [
         'document/using-knobs',
         'document/using-jacks',
@@ -35,11 +37,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'VCV Rack',
+      collapsible: false,
       items: ['document/using-vcv-rack'],
     },
     {
       type: 'category',
       label: 'プラグインと設定',
+      collapsible: false,
       items: [
         'document/plugins',
         'document/action-menu',
@@ -50,11 +54,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'エクスパンダー',
+      collapsible: false,
       items: ['document/wifi-expander', 'document/meta-aio', 'document/meta-buttons'],
     },
     {
       type: 'category',
       label: 'ヘルプ',
+      collapsible: false,
       items: ['document/troubleshooting', 'document/faq', 'document/versions', 'document/specs'],
     },
   ],
