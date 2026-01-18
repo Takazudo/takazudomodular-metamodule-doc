@@ -88,13 +88,15 @@ runs:
           exit 1
         fi
 
-        # Deploy using simple approach matching reference project
+        # Deploy with --filter for monorepo and --no-build for pre-built directory
         if [ "${{ inputs.deploy-production }}" = "true" ]; then
           echo "Deploying to production..."
           DEPLOY_OUTPUT=$(netlify deploy \
             --dir=./${{ inputs.build-dir }} \
             --site=${{ inputs.netlify-site-id }} \
             --auth=$NETLIFY_AUTH_TOKEN \
+            --filter=metamodule-doc-ja \
+            --no-build \
             --prod \
             --message="${{ inputs.deploy-message }}" 2>&1) || {
             echo "Deployment failed"
@@ -107,6 +109,8 @@ runs:
             --dir=./${{ inputs.build-dir }} \
             --site=${{ inputs.netlify-site-id }} \
             --auth=$NETLIFY_AUTH_TOKEN \
+            --filter=metamodule-doc-ja \
+            --no-build \
             --alias="${{ inputs.deploy-alias }}" \
             --message="${{ inputs.deploy-message }}" 2>&1) || {
             echo "Deployment failed"
