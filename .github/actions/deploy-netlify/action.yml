@@ -89,11 +89,14 @@ runs:
         fi
 
         # Build deployment command based on inputs
+        # Use --filter to specify the package in monorepo to avoid "Projects detected" error
         if [ "${{ inputs.deploy-production }}" = "true" ]; then
           echo "Deploying to production..."
           DEPLOY_OUTPUT=$(netlify deploy \
             --dir="${{ inputs.build-dir }}" \
             --site="${{ inputs.netlify-site-id }}" \
+            --auth="$NETLIFY_AUTH_TOKEN" \
+            --filter="metamodule-doc-ja" \
             --prod \
             --json \
             --message="${{ inputs.deploy-message }}" 2>&1) || {
@@ -106,6 +109,8 @@ runs:
           DEPLOY_OUTPUT=$(netlify deploy \
             --dir="${{ inputs.build-dir }}" \
             --site="${{ inputs.netlify-site-id }}" \
+            --auth="$NETLIFY_AUTH_TOKEN" \
+            --filter="metamodule-doc-ja" \
             --alias="${{ inputs.deploy-alias }}" \
             --json \
             --message="${{ inputs.deploy-message }}" 2>&1) || {
