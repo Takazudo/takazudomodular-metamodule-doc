@@ -14,58 +14,58 @@ originalUrl: https://github.com/4ms/metamodule-core-modules/blob/main/doc/4ms-co
 
 ### ユーティリティ
 
-- [Atvert](./atvert) - 2チャンネルのアッテヌバーター
-- [MNMX](./mnmx) - Min/Max出力モジュール
-- [OCT](./oct) - オクターブトランスポーズツール
-- [Pan](./pan) - ステレオパンニングユーティリティ
-- [S&H](./sample-and-hold) - デュアル・サンプル＆ホールド
-- [SRC](./src) - デュアル・バイポーラDCオフセットジェネレーター
-- [SLW](./slw) - アタック/リリース・スルーリミッター
+- [Atvert](./atvert.md) - 2チャンネルのアッテヌバーター
+- [MNMX](./mnmx.md) - Min/Max出力モジュール
+- [OCT](./oct.md) - オクターブトランスポーズツール
+- [Pan](./pan.md) - ステレオパンニングユーティリティ
+- [S&H](./sample-and-hold.md) - デュアル・サンプル＆ホールド
+- [SRC](./src.md) - デュアル・バイポーラDCオフセットジェネレーター
+- [SLW](./slw.md) - アタック/リリース・スルーリミッター
 
 ### オシレーター/サウンドソース
 
-- [FM](./fm) - 2オペレーターFMオシレーター
-- [NSE](./nse) - ホワイト/ピンクノイズジェネレーター
-- [Multi LFO](./multi-lfo) - 4波形出力LFO
-- [KPLS](./kpls) - Karplus Strongシンセシス
+- [FM](./fm.md) - 2オペレーターFMオシレーター
+- [NSE](./nse.md) - ホワイト/ピンクノイズジェネレーター
+- [Multi LFO](./multi-lfo.md) - 4波形出力LFO
+- [KPLS](./kpls.md) - Karplus Strongシンセシス
 
 ### ドラム/パーカッション
 
-- [Djembe](./djembe) - アコースティック・ジャンベモデル
-- [Drum](./drum) - FMベースドラムシンセ
-- [LPG](./lpg) - ローパスゲート
+- [Djembe](./djembe.md) - アコースティック・ジャンベモデル
+- [Drum](./drum.md) - FMベースドラムシンセ
+- [LPG](./lpg.md) - ローパスゲート
 
 ### フィルター
 
-- [BPF](./bpf) - レゾナント・バンドパスフィルター
-- [HPF](./hpf) - レゾナント・ハイパスフィルター
+- [BPF](./bpf.md) - レゾナント・バンドパスフィルター
+- [HPF](./hpf.md) - レゾナント・ハイパスフィルター
 
 ### エンベロープ/モジュレーション
 
-- [Complex EG](./complex-eg) - ADSHRエンベロープジェネレーター
-- [FLW](./flw) - エンベロープフォロワー
-- [Gate](./gate) - ゲート信号モディファイア
+- [Complex EG](./complex-eg.md) - ADSHRエンベロープジェネレーター
+- [FLW](./flw.md) - エンベロープフォロワー
+- [Gate](./gate.md) - ゲート信号モディファイア
 
 ### エフェクト
 
-- [Detune](./detune) - ワウ＆フラッター・テープシミュレーター
-- [Freeverb](./freeverb) - 軽量リバーブ
-- [Pitch Shift](./pitch-shift) - ピッチシフター
-- [Verb](./verb) - 実験的リバーブ
+- [Detune](./detune.md) - ワウ＆フラッター・テープシミュレーター
+- [Freeverb](./freeverb.md) - 軽量リバーブ
+- [Pitch Shift](./pitch-shift.md) - ピッチシフター
+- [Verb](./verb.md) - 実験的リバーブ
 
 ### クロック/シーケンサー
 
-- [CLKD](./clkd) - クロックディバイダー
-- [CLKM](./clkm) - クロックマルチプライヤー
-- [Prob 8](./prob-8) - 8ステップ確率ゲートシーケンサー
-- [SEQ 8](./seq-8) - 8ステップCVシーケンサー
+- [CLKD](./clkd.md) - クロックディバイダー
+- [CLKM](./clkm.md) - クロックマルチプライヤー
+- [Prob 8](./prob-8.md) - 8ステップ確率ゲートシーケンサー
+- [SEQ 8](./seq-8.md) - 8ステップCVシーケンサー
 
 ### ルーティング/スイッチング
 
-- [Switch 1:4](./switch-1-4) - 1入力4出力シーケンシャルスイッチ
-- [Switch 4:1](./switch-4-1) - 4入力1出力シーケンシャルスイッチ
-- [Stereo Mixer](./stereo-mixer) - 4チャンネルステレオミキサー
+- [Switch 1:4](./switch-1-4.md) - 1入力4出力シーケンシャルスイッチ
+- [Switch 4:1](./switch-4-1.md) - 4入力1出力シーケンシャルスイッチ
+- [Stereo Mixer](./stereo-mixer.md) - 4チャンネルステレオミキサー
 
 ### サンプラー
 
-- [Basic Wav Player](./basic-wav-player) - WAVファイルストリーミングプレーヤー
+- [Basic Wav Player](./basic-wav-player.md) - WAVファイルストリーミングプレーヤー
