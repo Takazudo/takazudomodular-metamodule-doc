@@ -88,15 +88,17 @@ runs:
           exit 1
         fi
 
+        # Change to the doc directory to avoid monorepo "Projects detected" error
+        # This ensures netlify only sees the metamodule-doc-ja package
+        cd doc
+
         # Build deployment command based on inputs
-        # Use --filter to specify the package in monorepo to avoid "Projects detected" error
         if [ "${{ inputs.deploy-production }}" = "true" ]; then
           echo "Deploying to production..."
           DEPLOY_OUTPUT=$(netlify deploy \
-            --dir="${{ inputs.build-dir }}" \
+            --dir="build" \
             --site="${{ inputs.netlify-site-id }}" \
             --auth="$NETLIFY_AUTH_TOKEN" \
-            --filter="metamodule-doc-ja" \
             --prod \
             --json \
             --message="${{ inputs.deploy-message }}" 2>&1) || {
@@ -107,10 +109,9 @@ runs:
         else
           echo "Deploying to preview (alias: ${{ inputs.deploy-alias }})..."
           DEPLOY_OUTPUT=$(netlify deploy \
-            --dir="${{ inputs.build-dir }}" \
+            --dir="build" \
             --site="${{ inputs.netlify-site-id }}" \
             --auth="$NETLIFY_AUTH_TOKEN" \
-            --filter="metamodule-doc-ja" \
             --alias="${{ inputs.deploy-alias }}" \
             --json \
             --message="${{ inputs.deploy-message }}" 2>&1) || {
