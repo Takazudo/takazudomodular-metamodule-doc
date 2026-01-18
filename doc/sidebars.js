@@ -15,6 +15,14 @@
  @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
 const sidebars = {
+  // Core modules sidebar - single page, no sidebar navigation needed
+  coreModulesSidebar: [
+    {
+      type: 'doc',
+      id: 'core-modules/index',
+      label: '4ms VCV Rackコアモジュールガイド',
+    },
+  ],
   documentSidebar: [
     'document/index',
     {

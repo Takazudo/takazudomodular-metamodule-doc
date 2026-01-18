@@ -82,6 +82,12 @@ const config = {
             label: 'ドキュメント',
           },
           {
+            type: 'doc',
+            docId: 'core-modules/index',
+            position: 'left',
+            label: 'コアモジュール',
+          },
+          {
             type: 'html',
             position: 'right',
             value:
